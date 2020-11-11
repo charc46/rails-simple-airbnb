@@ -1,0 +1,16 @@
+<h1 class="text-center">Apartments Available</h1>
+<div class="d-flex flex-wrap">
+  <% @flats.each do |flat| %>
+    <div class="card m-2" style="width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-title"><%= flat.name %></h5>
+      <h6 class="card-subtitle mb-2 text-muted"><%= flat.address %></h6>
+      <p class="card-text">
+        €<%= flat.price_per_night %> |
+        <i class="fas fa-user-friends"></i><%= flat.number_of_guests %> Guests
+      <p>
+      <%= link_to "More Info", flat_path(flat), class: 'card-link' %>
+    </div>
+  </div>
+<% end %>
+</div>

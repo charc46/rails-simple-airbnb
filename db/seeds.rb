@@ -5,3 +5,13 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+10.times do
+  Flat.create!(
+    name: Faker::Movies::HitchhikersGuideToTheGalaxy.location,
+    address: Faker::Address.street_address,
+    description: Faker::Coffee.notes,
+    price_per_night: rand(50..250),
+    number_of_guests: rand(1..12)
+    )
+end
