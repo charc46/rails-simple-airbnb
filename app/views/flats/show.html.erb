@@ -1,0 +1,24 @@
+<h1 class="text-center"> Flat Details </h1>
+<div class="container d-flex">
+  <div class="container">
+    <div class="bg-light border w-100 m-2 p-2">
+      <h2> <%= @flat.name %> </h2>
+      <p> <%= @flat.address %> </p>
+    </div>
+    <div class="bg light border w-100 m-2 p-2">
+      <h4>A little more about this flat...</h4>
+      <p> <%= @flat.description %> </p>
+    </div>
+    <div class="bg light border w-100 m-2 p-2">
+      <h5>Details</h5>
+      <i class="fas fa-user-friends"></i> <%= @flat.number_of_guests %> | <i class="fas fa-euro-sign"></i> <%= @flat.price_per_night %>
+     </div>
+  </div>
+  <div class="container bg-light border p-4 w-75">
+    <%= simple_form_for '#' do |f| %>
+      <%= f.input 'From:' %>
+      <%= f.input 'To:' %>
+      <%= f.submit "Book", class: 'btn btn-success w-100' %>
+    <% end %>
+  </div>
+</div>
