@@ -11,3 +11,18 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
+
+.banner {
+  padding: 200px 0;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  margin-top: -50px;
+}
+
+.main {
+  margin-top: -50px;
+}
+
+

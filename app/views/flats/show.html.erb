@@ -1,5 +1,5 @@
-<h1 class="text-center"> Flat Details </h1>
-<div class="container d-flex">
+<div class="banner w-100" style="background-image: url('<%= @flat.image_url %>')"></div>
+<div class="container d-flex main">
   <div class="container">
     <div class="bg-light border w-100 m-2 p-2">
       <h2> <%= @flat.name %> </h2>
@@ -14,7 +14,8 @@
       <i class="fas fa-user-friends"></i> <%= @flat.number_of_guests %> | <i class="fas fa-euro-sign"></i> <%= @flat.price_per_night %>
      </div>
   </div>
-  <div class="container bg-light border p-4 w-75">
+  <div class="container bg-light border p-4 w-75 mt-2">
+    <h5>Book this flat!</h5>
     <%= simple_form_for '#' do |f| %>
       <%= f.input 'From:' %>
       <%= f.input 'To:' %>
